@@ -19,6 +19,11 @@
 	</properties>
 
 	<dependencies>
+<!--		消除方法中的样板式代码:getter和setter方法,可能还要写一个构造器、equals方法、或者hash方法-->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
