@@ -11,6 +11,7 @@ public class myMvcConfig implements WebMvcConfigurer {
     public void addViewControllers(ViewControllerRegistry registry) {
         registry.addViewController("/").setViewName("index");
         registry.addViewController("/index.html").setViewName("index");
+        registry.addViewController("/main.html").setViewName("dashboard");//注入视图
     }
 //    往容器注入自定义国家化组件
     @Bean
