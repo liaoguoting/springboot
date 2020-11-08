@@ -27,7 +27,7 @@
     <h1 class="h3 mb-3 font-weight-normal" th:text = "#{login.tip}"></h1>
 <!--    错误提示 msg不为空才显示-->
     <p style="color:red" th:text="${msg}" th:if="${not #strings.isEmpty(msg)}"></p>
-    <input type="email" name="username" id="inputEmail" class="form-control" th:placeholder="#{login.email}" required="" autofocus="">
+    <input type="" name="username" id="inputEmail" class="form-control" th:placeholder="#{login.username}" required="" autofocus="">
     <input type="password" name="password" id="inputPassword" class="form-control" th:placeholder="#{login.password}" required="">
     <div class="checkbox mb-3">
         <label>

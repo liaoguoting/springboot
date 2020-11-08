@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.servlet.http.HttpSession;
+
 @Controller
 public class LoginController {
     @RequestMapping("/user/login")
@@ -14,13 +16,15 @@ public class LoginController {
     public String login(
             @RequestParam("username") String username,
             @RequestParam("password") String password,
-            Model model
+            Model model,
+            HttpSession session//1108 拦截器
     ) {
         if (!StringUtils.isEmpty(username) && "123".equals(password)) {
-//            return "dashboard";
-            return "redirect:/main.html";//重定向
+            session.setAttribute("loginUser", username);//1108 拦截器
+//            return "dashboard";//直接进入登录页面
+            return "redirect:/main.html";//1107 登陆功能 重定向
         } else {
-            model.addAttribute("msg","用户名或密码错误");
+            model.addAttribute("msg", "用户名或密码错误");
             return "index";
         }
     }
