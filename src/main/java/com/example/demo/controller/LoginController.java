@@ -19,7 +19,7 @@ public class LoginController {
             Model model,
             HttpSession session//1108 拦截器
     ) {
-        if (!StringUtils.isEmpty(username) && "123".equals(password)) {
+        if (!StringUtils.isEmpty(username) && "1".equals(password)) {
             session.setAttribute("loginUser", username);//1108 拦截器
 //            return "dashboard";//直接进入登录页面
             return "redirect:/main.html";//1107 登陆功能 重定向
