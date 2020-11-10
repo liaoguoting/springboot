@@ -8,8 +8,12 @@ public class Employee {
     private String lastName;
     private String email;
     private Integer gender;//0女1男
-    private Department department;
+    public Department department;
     private Date birth;
+//坑一 添加成员提交表单 因为department未实例化就被迫接收name=department.id报错
+    public Employee() {
+        department = new Department();
+    }
 
     public Employee(Integer id, String lastName, String email, Integer gender, Department department) {
         this.id = id;

@@ -15,11 +15,11 @@ public class DepartmentDao {
 
     static {
         departments = new HashMap<Integer, Department>();
-        departments.put(101, new Department(101, "AAA1"));
-        departments.put(102, new Department(102, "AAA2"));
-        departments.put(103, new Department(103, "AAA3"));
-        departments.put(104, new Department(104, "AAA4"));
-        departments.put(105, new Department(105, "AAA5"));
+        departments.put(101,new Department(101,"教学部"));
+        departments.put(102,new Department(102,"市场部"));
+        departments.put(103,new Department(103,"教研部"));
+        departments.put(104,new Department(104,"运营部"));
+        departments.put(105,new Department(105,"后勤部"));
     }
 
     //    获取所有部门信息
